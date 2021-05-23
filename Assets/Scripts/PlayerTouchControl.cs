@@ -60,7 +60,7 @@ public class PlayerTouchControl : MonoBehaviour
       boost = false;
     }
     var main = dustParticles.main;
-    main.simulationSpeed = body.velocity.magnitude;
+    main.simulationSpeed = body.velocity.magnitude + 0.1f;
   }
 
   void OnCollisionEnter2D(Collision2D col) {

@@ -12,14 +12,12 @@ public class CometUpdater : MonoBehaviour
     void Start()
     {
         body = GetComponent(typeof(Rigidbody2D)) as Rigidbody2D;
+        Destroy(gameObject, 9f);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         body.AddForce(direction * moveSpeed);
-    }
-    void OnBecameInvisible() {
-        Destroy(gameObject);
     }
 }
