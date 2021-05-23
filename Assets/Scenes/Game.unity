@@ -380,6 +380,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 144982220}
   animator: {fileID: 144982228}
+  dustParticles: {fileID: 1055762121}
   agility: 5
   moveSpeed: 15
   boostSpeed: 3
@@ -1661,7 +1662,7 @@ ParticleSystem:
   m_GameObject: {fileID: 1055762118}
   serializedVersion: 6
   lengthInSec: 5
-  simulationSpeed: 1
+  simulationSpeed: 0.5
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0

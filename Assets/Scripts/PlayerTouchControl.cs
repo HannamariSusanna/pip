@@ -6,6 +6,7 @@ public class PlayerTouchControl : MonoBehaviour
 {
   public Rigidbody2D body;
   public Animator animator;
+  public ParticleSystem dustParticles;
 
   public float agility = 5f;
   public float moveSpeed = 15f;
@@ -14,7 +15,7 @@ public class PlayerTouchControl : MonoBehaviour
   private bool boost = false;
   private bool upDown = false;
   private bool downDown = false;
-  
+
   // Update is called once per frame
   void Update()
   {
@@ -58,6 +59,8 @@ public class PlayerTouchControl : MonoBehaviour
       body.AddForce(transform.right * boostSpeed, ForceMode2D.Impulse);
       boost = false;
     }
+    var main = dustParticles.main;
+    main.simulationSpeed = body.velocity.magnitude;
   }
 
   void OnCollisionEnter2D(Collision2D col) {
