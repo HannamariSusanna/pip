@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class DeployComet : MonoBehaviour
 {
-    public GameObject cometPrefab;
+    public GameObject[] cometPrefabs;
     public Transform player;
     private Vector2 screenBounds;
+    private System.Random random;
 
     // Start is called before the first frame update
     void Start()
     {
+        random = new System.Random();
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0f));
         StartCoroutine(CometWave());
     }
@@ -22,7 +24,8 @@ public class DeployComet : MonoBehaviour
     }
 
     private void SpawnComet() {
-        GameObject c = Instantiate(cometPrefab) as GameObject;
+        int randomCometIndex = random.Next(0, cometPrefabs.Length);
+        GameObject c = Instantiate(cometPrefabs[randomCometIndex]) as GameObject;
         c.transform.position = player.position + player.TransformDirection(new Vector2(screenBounds.x * 1.5f, screenBounds.y * 1f));
         c.transform.eulerAngles = player.eulerAngles;
 
