@@ -29,6 +29,7 @@ public class DeployComet : MonoBehaviour
         CometUpdater cometUpdater = c.GetComponent(typeof(CometUpdater)) as CometUpdater;
         Vector2 dir = c.transform.TransformDirection(new Vector2(-0.5f, -0.5f));
         cometUpdater.direction = dir.normalized;
+        cometUpdater.player = player;
     }
 
     IEnumerator CometWave() {

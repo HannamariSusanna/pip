@@ -43,6 +43,8 @@ public class PlayerTouchControl : MonoBehaviour
       Vector3 rotation = transform.eulerAngles;
       rotation.z -= 10f * agility * Time.deltaTime;
       transform.eulerAngles = rotation;
+    } else if (Input.GetKeyDown(KeyCode.RightArrow)) {
+      boost = true;
     }
 
     if (Input.GetKeyUp(KeyCode.UpArrow)) {
