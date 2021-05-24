@@ -11,7 +11,6 @@ public class Carrot : MonoBehaviour
     }
 
     private void PickUp() {
-        Debug.Log("Power up jea");
         Destroy(gameObject);
     }
 }
