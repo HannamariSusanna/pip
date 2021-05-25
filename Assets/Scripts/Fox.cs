@@ -13,6 +13,14 @@ public class Fox : MonoBehaviour
     private Vector3 spawnPos;
     private bool hasSpawned = false;
 
+    void Update() {
+        if (Vector2.Distance(transform.position, player.position) < 3f) {
+            Vector3 targetDir = player.position - transform.position;
+            float angle = (Mathf.Atan2(targetDir.y, targetDir.x) * Mathf.Rad2Deg) + 90f;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {

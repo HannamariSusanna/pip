@@ -11,10 +11,11 @@ public class PlayerTouchControl : MonoBehaviour
   public float agility = 5f;
   public float moveSpeed = 15f;
   public float boostSpeed = 3f;
+  public float boostCooldown = 4f;
 
-  private bool boost = false;
   private bool upDown = false;
   private bool downDown = false;
+  private bool cool = true;
 
   // Update is called once per frame
   void Update()
@@ -30,8 +31,8 @@ public class PlayerTouchControl : MonoBehaviour
         Vector3 rotation = transform.eulerAngles;
         rotation.z -= (currentAngle - deltaAngle);
         transform.eulerAngles = rotation;
-      } else if (touch.tapCount == 2) {
-        boost = true;
+      } else if (touch.tapCount == 2 && cool) {
+        Boost();
       }
     } else if (upDown || Input.GetKeyDown(KeyCode.UpArrow)) {
       upDown = true;
@@ -43,8 +44,8 @@ public class PlayerTouchControl : MonoBehaviour
       Vector3 rotation = transform.eulerAngles;
       rotation.z -= 10f * agility * Time.deltaTime;
       transform.eulerAngles = rotation;
-    } else if (Input.GetKeyDown(KeyCode.RightArrow)) {
-      boost = true;
+    } else if (Input.GetKeyDown(KeyCode.RightArrow) && cool) {
+      Boost();
     }
 
     if (Input.GetKeyUp(KeyCode.UpArrow)) {
@@ -57,10 +58,6 @@ public class PlayerTouchControl : MonoBehaviour
 
   void FixedUpdate() {
     body.AddForce(transform.right * moveSpeed);
-    if (boost) {
-      body.AddForce(transform.right * boostSpeed, ForceMode2D.Impulse);
-      boost = false;
-    }
     var main = dustParticles.main;
     main.simulationSpeed = body.velocity.magnitude + 0.1f;
   }
@@ -70,5 +67,20 @@ public class PlayerTouchControl : MonoBehaviour
   }
   void OnCollisionExit2D(Collision2D other) {
     animator.SetBool("IsHit", false);
+  }
+
+  private void Boost() {
+    body.AddForce(transform.right * boostSpeed, ForceMode2D.Impulse);
+    CooldownStart();
+  }
+
+  private void CooldownStart() {
+      StartCoroutine(CooldownCoroutine());
+  }
+
+  IEnumerator CooldownCoroutine() {
+      cool = false;
+      yield return new WaitForSeconds(boostCooldown);
+      cool = true;
   }
 }
