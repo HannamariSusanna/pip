@@ -2,24 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerTouchControl : MonoBehaviour
+public class Player : MonoBehaviour
 {
   public Rigidbody2D body;
   public Animator animator;
   public ParticleSystem dustParticles;
+  public EnergyBar energyBar;
 
   public float agility = 5f;
   public float moveSpeed = 15f;
   public float boostSpeed = 3f;
-  public float boostCooldown = 4f;
+  public int energyRechargeRate = 25;
+  public int boostEnergyCost = 100;
+
+  public int maxEnergy = 100;
+  public float currentEnergy = 100f;
+  private bool consumingEnergy = false;
 
   private bool upDown = false;
   private bool downDown = false;
-  private bool cool = true;
+
+  void Start() {
+    currentEnergy = maxEnergy;
+    energyBar.SetMaxEnergy(maxEnergy);
+  }
 
   // Update is called once per frame
   void Update()
   {
+    RechargeEnergy();
+
     if (Input.touchCount > 0) {
       Touch touch = Input.GetTouch(0);
       if (touch.phase == TouchPhase.Moved) {
@@ -31,7 +43,7 @@ public class PlayerTouchControl : MonoBehaviour
         Vector3 rotation = transform.eulerAngles;
         rotation.z -= (currentAngle - deltaAngle);
         transform.eulerAngles = rotation;
-      } else if (touch.tapCount == 2 && cool) {
+      } else if (touch.tapCount == 2) {
         Boost();
       }
     } else if (upDown || Input.GetKeyDown(KeyCode.UpArrow)) {
@@ -44,7 +56,7 @@ public class PlayerTouchControl : MonoBehaviour
       Vector3 rotation = transform.eulerAngles;
       rotation.z -= 10f * agility * Time.deltaTime;
       transform.eulerAngles = rotation;
-    } else if (Input.GetKeyDown(KeyCode.RightArrow) && cool) {
+    } else if (Input.GetKeyDown(KeyCode.RightArrow)) {
       Boost();
     }
 
@@ -70,17 +82,18 @@ public class PlayerTouchControl : MonoBehaviour
   }
 
   private void Boost() {
-    body.AddForce(transform.right * boostSpeed, ForceMode2D.Impulse);
-    CooldownStart();
+    if (currentEnergy >= boostEnergyCost) {
+      body.AddForce(transform.right * boostSpeed, ForceMode2D.Impulse);
+      currentEnergy -= boostEnergyCost;
+      energyBar.SetEnergy(Mathf.RoundToInt(currentEnergy));
+    }
   }
 
-  private void CooldownStart() {
-      StartCoroutine(CooldownCoroutine());
-  }
-
-  IEnumerator CooldownCoroutine() {
-      cool = false;
-      yield return new WaitForSeconds(boostCooldown);
-      cool = true;
+  private void RechargeEnergy() {
+    if (!consumingEnergy && currentEnergy < maxEnergy) {
+      currentEnergy += energyRechargeRate * Time.deltaTime;
+      currentEnergy = Mathf.Min(maxEnergy, currentEnergy);
+      energyBar.SetEnergy(Mathf.RoundToInt(currentEnergy));
+    }
   }
 }
