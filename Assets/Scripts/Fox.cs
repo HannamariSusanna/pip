@@ -6,6 +6,7 @@ public class Fox : MonoBehaviour
 {
     public Transform player;
     public Rigidbody2D body;
+    public Animator animator;
 
     public float moveSpeed = 20f;
 
@@ -18,6 +19,9 @@ public class Fox : MonoBehaviour
             Vector3 targetDir = player.position - transform.position;
             float angle = (Mathf.Atan2(targetDir.y, targetDir.x) * Mathf.Rad2Deg) + 90f;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            animator.SetBool("attacking", true);
+        } else {
+            animator.SetBool("attacking", false);
         }
     }
 
@@ -46,5 +50,6 @@ public class Fox : MonoBehaviour
 
     public void FallBack() {
         isChasing = false;
+
     }
 }
