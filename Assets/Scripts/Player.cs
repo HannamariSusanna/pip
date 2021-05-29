@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
   public Animator animator;
   public ParticleSystem dustParticles;
   public EnergyBar energyBar;
+  public PauseDialog pauseDialog;
 
   public float agility = 5f;
   public float moveSpeed = 15f;
@@ -58,6 +59,12 @@ public class Player : MonoBehaviour
       transform.eulerAngles = rotation;
     } else if (Input.GetKeyDown(KeyCode.RightArrow)) {
       Boost();
+    } else if (Input.GetKeyDown(KeyCode.Escape)) {
+      if (!pauseDialog.IsPaused()) {
+        pauseDialog.PauseGame();
+      } else{
+        pauseDialog.ContinueGame();
+      }
     }
 
     if (Input.GetKeyUp(KeyCode.UpArrow)) {
