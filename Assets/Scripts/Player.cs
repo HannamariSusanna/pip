@@ -8,6 +8,7 @@ public class Player : MonoBehaviour
   public Animator animator;
   public ParticleSystem dustParticles;
   public EnergyBar energyBar;
+  public HealthBar healthBar;
   public PauseDialog pauseDialog;
 
   public float agility = 5f;
@@ -15,6 +16,9 @@ public class Player : MonoBehaviour
   public float boostSpeed = 3f;
   public int energyRechargeRate = 25;
   public int boostEnergyCost = 100;
+  public int maxHealth = 3;
+  public int currentHealth = 3;
+  public int invulnerableTimeAfterHit = 2;
 
   public int maxEnergy = 100;
   public float currentEnergy = 100f;
@@ -24,10 +28,13 @@ public class Player : MonoBehaviour
   private bool downDown = false;
   private int carrotsPicked = 0;
   private int collisions = 0;
+  private bool invulnerable = false;
 
   void Start() {
     currentEnergy = maxEnergy;
+    currentHealth = maxHealth;
     energyBar.SetMaxEnergy(maxEnergy);
+    healthBar.SetMaxHealth(maxHealth);
   }
 
   // Update is called once per frame
@@ -85,7 +92,7 @@ public class Player : MonoBehaviour
 
   void OnCollisionEnter2D(Collision2D other) {
     animator.SetBool("IsHit", true);
-    collisions += 1;
+    TakeDamage();
   }
   void OnCollisionExit2D(Collision2D other) {
     animator.SetBool("IsHit", false);
@@ -97,12 +104,30 @@ public class Player : MonoBehaviour
     }
   }
 
+  private IEnumerator InvulnerableTimeout(int seconds) {
+    invulnerable = true;
+    healthBar.Disabled();
+    yield return new WaitForSeconds(seconds);
+    invulnerable = false;
+    healthBar.Enabled();
+  }
+
   public int GetCarrotsPicked() {
     return carrotsPicked;
   }
 
   public int GetCollisionCount() {
     return collisions;
+  }
+
+  private void TakeDamage() {
+    if (!invulnerable && currentHealth > 0) {
+      currentHealth -= 1;
+      healthBar.SetHealth(currentHealth);
+      StartCoroutine(InvulnerableTimeout(invulnerableTimeAfterHit));
+    } else if (!invulnerable) {
+      collisions += 1;
+    }
   }
 
   private void Boost() {

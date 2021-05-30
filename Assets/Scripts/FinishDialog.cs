@@ -41,7 +41,7 @@ public class FinishDialog : MonoBehaviour
     }
 
     private IEnumerator CalculatePoints() {
-        int timeBonus = Mathf.Max((300 - timer.GetSeconds()) * 50, 0);
+        int timeBonus = Mathf.Max((300 - timer.GetSeconds()) * 55, 0);
         int carrotBonus = player.GetCarrotsPicked() * 1000;
         int collisionPenalty = -player.GetCollisionCount() * 100;
         var timeBonusRoutine = CountTo(timeBonus, timeBonusText);
