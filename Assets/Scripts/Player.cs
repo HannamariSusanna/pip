@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
 
   private bool upDown = false;
   private bool downDown = false;
+  private int carrotsPicked = 0;
+  private int collisions = 0;
 
   void Start() {
     currentEnergy = maxEnergy;
@@ -81,11 +83,26 @@ public class Player : MonoBehaviour
     main.simulationSpeed = body.velocity.magnitude + 0.1f;
   }
 
-  void OnCollisionEnter2D(Collision2D col) {
+  void OnCollisionEnter2D(Collision2D other) {
     animator.SetBool("IsHit", true);
+    collisions += 1;
   }
   void OnCollisionExit2D(Collision2D other) {
     animator.SetBool("IsHit", false);
+  }
+
+  private void OnTriggerEnter2D(Collider2D other) {
+    if (other.CompareTag("Carrot")) {
+      carrotsPicked += 1;
+    }
+  }
+
+  public int GetCarrotsPicked() {
+    return carrotsPicked;
+  }
+
+  public int GetCollisionCount() {
+    return collisions;
   }
 
   private void Boost() {

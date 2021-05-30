@@ -5,20 +5,18 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     public TMPro.TextMeshProUGUI tm;
-    private float millisElapsed = 0;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private float secondsElapsed = 0;
 
     // Update is called once per frame
     void Update()
     {
-        millisElapsed += Time.deltaTime;
-        float minutes = Mathf.FloorToInt(millisElapsed / 60);
-        float seconds = Mathf.FloorToInt(millisElapsed % 60);
+        secondsElapsed += Time.deltaTime;
+        float minutes = Mathf.FloorToInt(secondsElapsed / 60);
+        float seconds = Mathf.FloorToInt(secondsElapsed % 60);
         tm.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    public int GetSeconds() {
+        return Mathf.RoundToInt(secondsElapsed);
     }
 }
