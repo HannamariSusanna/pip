@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class EnergyBar : MonoBehaviour
 {
     public Slider slider;
+    public Image fill;
 
     public void SetMaxEnergy(int energy) {
         slider.maxValue = energy;
@@ -14,5 +15,13 @@ public class EnergyBar : MonoBehaviour
 
     public void SetEnergy(int energy) {
         slider.value = energy;
+    }
+
+    public void Disabled() {
+        fill.color = Color.grey;
+    }
+
+    public void Enabled() {
+        fill.color = Color.white;
     }
 }

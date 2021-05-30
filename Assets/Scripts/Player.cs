@@ -110,6 +110,9 @@ public class Player : MonoBehaviour
       body.AddForce(transform.right * boostSpeed, ForceMode2D.Impulse);
       currentEnergy -= boostEnergyCost;
       energyBar.SetEnergy(Mathf.RoundToInt(currentEnergy));
+      if (currentEnergy < boostEnergyCost) {
+        energyBar.Disabled();
+      }
     }
   }
 
@@ -118,6 +121,9 @@ public class Player : MonoBehaviour
       currentEnergy += energyRechargeRate * Time.deltaTime;
       currentEnergy = Mathf.Min(maxEnergy, currentEnergy);
       energyBar.SetEnergy(Mathf.RoundToInt(currentEnergy));
+      if (currentEnergy >= boostEnergyCost) {
+        energyBar.Enabled();
+      }
     }
   }
 }
