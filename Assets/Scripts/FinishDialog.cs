@@ -47,7 +47,7 @@ public class FinishDialog : MonoBehaviour
         var timeBonusRoutine = CountTo(timeBonus, timeBonusText);
         var carrotBonusRoutine = CountTo(carrotBonus, carrotBonusText);
         var collisionPenaltyRoutine = CountTo(collisionPenalty, collisionPenaltyText);
-        int total = timeBonus + carrotBonus - collisionPenalty;
+        int total = timeBonus + carrotBonus + collisionPenalty;
         var totalRoutine = CountTo(total, totalText);
         yield return StartCoroutine(timeBonusRoutine);
         yield return StartCoroutine(carrotBonusRoutine);
