@@ -25,7 +25,7 @@ public class FinishDialog : MonoBehaviour
 
     public void FinishLevel() {
         gameObject.SetActive(false);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(0);
     }
 
     public void Retry() {

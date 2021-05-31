@@ -5,8 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-
     public void PlayGame() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        StartCoroutine(loadSceneWithDelay(SceneManager.GetActiveScene().buildIndex + 1, 0.6f));
+    }
+
+    public IEnumerator loadSceneWithDelay(int index, float delay) {
+        yield return new WaitForSeconds(delay);
+        StartCoroutine(SceneUtils.load(index));
     }
 }

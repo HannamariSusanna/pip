@@ -10,7 +10,7 @@ public class PauseDialog : MonoBehaviour
 
     public void FinishLevel() {
         gameObject.SetActive(false);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene(0);
         ContinueGame();
     }
 
