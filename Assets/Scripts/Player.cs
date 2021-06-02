@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
   public EnergyBar energyBar;
   public HealthBar healthBar;
   public PauseDialog pauseDialog;
+  public GameObject finishDialog;
 
   public float agility = 5f;
   public float moveSpeed = 15f;
@@ -126,6 +127,9 @@ public class Player : MonoBehaviour
       healthBar.SetHealth(currentHealth);
       StartCoroutine(InvulnerableTimeout(invulnerableTimeAfterHit));
     } else if (!invulnerable) {
+      if (finishDialog != null) {
+        finishDialog.SetActive(true);
+      }
       collisions += 1;
     }
   }

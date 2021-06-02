@@ -522,78 +522,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7242632900074261528, guid: 2971fd7a56d0b404797407daa8cf44e3, type: 3}
   m_PrefabInstance: {fileID: 7242632899852409018}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &228056071
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 228056072}
-  - component: {fileID: 228056073}
-  m_Layer: 0
-  m_Name: Star
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &228056072
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 228056071}
-  m_LocalRotation: {x: 0, y: 0, z: -0.84357893, w: 0.53700525}
-  m_LocalPosition: {x: -24.5, y: 8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 766155778}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -115.04}
---- !u!114 &228056073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 228056071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_LightType: 3
-  m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.8
-  m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 57d5e22b
-  m_LightCookieSprite: {fileID: 0}
-  m_UseNormalMap: 1
-  m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 0
-  m_ShadowIntensity: 0
-  m_ShadowVolumeIntensity: 1
-  m_PointLightInnerAngle: 120
-  m_PointLightOuterAngle: 120
-  m_PointLightInnerRadius: 80
-  m_PointLightOuterRadius: 100
-  m_PointLightDistance: 200
-  m_PointLightQuality: 0
-  m_ShapeLightParametricSides: 5
-  m_ShapeLightParametricAngleOffset: 0
-  m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
-  m_ShapeLightFalloffOffset: {x: 0, y: 0}
-  m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &279417963
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,8 +1158,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.2034254, y: 1.8383875, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 228056072}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23369,17 +23296,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 550352516}
     - target: {fileID: 5759434686813476478, guid: 7d87e92605d3a6d43901138f5a848264, type: 3}
-      propertyPath: pauseDialog
-      value: 
-      objectReference: {fileID: 1011950427}
-    - target: {fileID: 5759434686813476478, guid: 7d87e92605d3a6d43901138f5a848264, type: 3}
-      propertyPath: uiCamera
-      value: 
-      objectReference: {fileID: 1851020153}
-    - target: {fileID: 5759434686813476478, guid: 7d87e92605d3a6d43901138f5a848264, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 648362006}
+    - target: {fileID: 5759434686813476478, guid: 7d87e92605d3a6d43901138f5a848264, type: 3}
+      propertyPath: pauseDialog
+      value: 
+      objectReference: {fileID: 1011950427}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d87e92605d3a6d43901138f5a848264, type: 3}
 --- !u!1001 &6784252840199672939

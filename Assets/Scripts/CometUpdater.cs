@@ -10,7 +10,10 @@ public class CometUpdater : MonoBehaviour
     public Rigidbody2D body;
 
     void OnEnable() {
-        direction = transform.TransformDirection(new Vector2(-0.5f, -0.5f)).normalized;
+        Vector3 targetDir = player.position - transform.position;
+        float angle = (Mathf.Atan2(targetDir.y, targetDir.x) * Mathf.Rad2Deg) + 135;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        direction = targetDir.normalized;
     }
 
     void Update() {

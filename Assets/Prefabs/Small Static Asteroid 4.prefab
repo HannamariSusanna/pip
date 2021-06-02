@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!60 &4644561696651792693
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9011523060558866218}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.65, y: 1.17}
+    newSize: {x: 1.65, y: 1.17}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.655, y: 0.565}
+      - {x: -0.825, y: -0.105}
+      - {x: -0.405, y: -0.575}
+      - {x: 0.615, y: -0.39499998}
+      - {x: 0.825, y: 0.315}
+      - {x: 0.505, y: 0.575}
+--- !u!1001 &7006002195551929314
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2032545765605303496, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_Name
+      value: Small Static Asteroid 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3723664904258857369, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3293240858310902380, guid: 7821e0340eb8e1f42a04b0b90eda61c9, type: 3}
+    - target: {fileID: 3723664904258857369, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_Size.x
+      value: 1.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 3723664904258857369, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_Size.y
+      value: 1.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 3723664904258857369, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387133637954935087, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387133637954935087, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387133637954935087, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387133637954935087, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387133637954935087, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387133637954935087, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387133637954935087, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387133637954935087, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387133637954935087, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387133637954935087, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387133637954935087, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+--- !u!1 &9011523060558866218 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2032545765605303496, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+  m_PrefabInstance: {fileID: 7006002195551929314}
+  m_PrefabAsset: {fileID: 0}
