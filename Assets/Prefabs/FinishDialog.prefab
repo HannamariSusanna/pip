@@ -394,7 +394,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 24.493668, y: 29.08642, z: 26.024805, w: 24.493843}
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -411,7 +411,6 @@ GameObject:
   - component: {fileID: 3316424747242991963}
   - component: {fileID: 3316424747242991965}
   - component: {fileID: 3316424747242991964}
-  - component: {fileID: 3316424747242991967}
   m_Layer: 5
   m_Name: Container
   m_TagString: Untagged
@@ -466,9 +465,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
+  m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -482,21 +481,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3316424747242991967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3316424747242991962}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0.61960787, g: 0.078431375, b: 0.27450982, a: 1}
-  m_EffectDistance: {x: 6, y: 6}
-  m_UseGraphicAlpha: 0
 --- !u!1 &3316424747344488629
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,7 +624,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 7042847911465117151, guid: 1a6376219effd1e4cbeb78d1753a001c, type: 3}
-    m_PressedSprite: {fileID: 7042847911465117151, guid: 1a6376219effd1e4cbeb78d1753a001c, type: 3}
+    m_PressedSprite: {fileID: 0}
     m_SelectedSprite: {fileID: 7042847911465117151, guid: 1a6376219effd1e4cbeb78d1753a001c, type: 3}
     m_DisabledSprite: {fileID: 7903818253674975445, guid: 1a6376219effd1e4cbeb78d1753a001c, type: 3}
   m_AnimationTriggers:
@@ -1320,7 +1304,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -60, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3316424747946795477
@@ -1414,7 +1398,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 84.19787, y: 26.024757, z: -39.802612, w: 26.024734}
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1608,9 +1592,10 @@ MonoBehaviour:
   carrotBonusText: {fileID: 3316424747159825546}
   collisionPenaltyText: {fileID: 3316424747978126198}
   totalText: {fileID: 3316424748181894858}
-  player: {fileID: 0}
   timer: {fileID: 0}
+  distanceCalculator: {fileID: 0}
   duration: 0.5
+  gameModeComponent: {fileID: 0}
 --- !u!1 &3316424748142615879
 GameObject:
   m_ObjectHideFlags: 0
@@ -1777,8 +1762,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -159, y: 57}
-  m_SizeDelta: {x: 40, y: 20}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3316424748157586561
 CanvasRenderer:
@@ -1871,7 +1856,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 203.6054, y: 94.91368, z: -116.948975, w: -19.901215}
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

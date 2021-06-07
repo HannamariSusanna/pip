@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!60 &922993880200730849
+--- !u!60 &499870116331490565
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,6 +39,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 922993880200730849, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 4.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 922993880200730849, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 922993880200730849, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 4.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 922993880200730849, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 4.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1714546101187194640, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 4.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 1714546101187194640, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1714546101187194640, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 4.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 1714546101187194640, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 4.2
+      objectReference: {fileID: 0}
     - target: {fileID: 2032545765605303496, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
       propertyPath: m_Name
       value: Big Static Asteroid 2
@@ -58,6 +90,22 @@ PrefabInstance:
     - target: {fileID: 3723664904258857369, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578014718977923966, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 4.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578014718977923966, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578014718977923966, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 4.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578014718977923966, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 4.2
       objectReference: {fileID: 0}
     - target: {fileID: 6387133637954935087, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
       propertyPath: m_LocalPosition.x

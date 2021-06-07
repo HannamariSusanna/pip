@@ -5,12 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameModeSelector : MonoBehaviour
 {
-    public enum GameMode { standard = 0, infinite = 1 }
-
-    private GameMode selection;
+    public enum GameModes { standard = 0, infinite = 1 }
 
     public void SelectGameMode(int m) {
-        selection = (GameMode) m;
         StartCoroutine(SceneUtils.load(SceneManager.GetActiveScene().buildIndex + 1 + m));
     }
 }

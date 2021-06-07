@@ -39,6 +39,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 922993880200730849, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 3.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 922993880200730849, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 922993880200730849, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 3.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 922993880200730849, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 4.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1714546101187194640, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 3.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 1714546101187194640, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1714546101187194640, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 3.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 1714546101187194640, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 4.18
+      objectReference: {fileID: 0}
     - target: {fileID: 2032545765605303496, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
       propertyPath: m_Name
       value: Big Static Asteroid 3
@@ -58,6 +90,22 @@ PrefabInstance:
     - target: {fileID: 3723664904258857369, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578014718977923966, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 3.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578014718977923966, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578014718977923966, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 3.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 4578014718977923966, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 4.18
       objectReference: {fileID: 0}
     - target: {fileID: 6387133637954935087, guid: 3d6f843ce268582478fb5ad09db3e1f8, type: 3}
       propertyPath: m_LocalPosition.x

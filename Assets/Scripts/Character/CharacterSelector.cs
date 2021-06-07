@@ -6,9 +6,9 @@ public class CharacterSelector : MonoBehaviour
 {
     public enum Character { bunny = 0, racoon = 1 }
 
-    private Character selection = Character.bunny;
+    public static Character selection = Character.racoon;
 
     public void SelectCharacter(int m) {
-        selection = (Character) m;
+        CharacterSelector.selection = (Character) m;
     }
 }

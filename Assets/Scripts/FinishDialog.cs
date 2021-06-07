@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,10 +10,11 @@ public class FinishDialog : MonoBehaviour
     public TMPro.TextMeshProUGUI carrotBonusText;
     public TMPro.TextMeshProUGUI collisionPenaltyText;
     public TMPro.TextMeshProUGUI totalText;
-    public Player player;
     public Timer timer;
-
+    public DistancePointsCalculator distanceCalculator;
     public float duration = 0.5f;
+
+    public GameModeComponent gameModeComponent;
 
     public void OnEnable() {
         PauseGame();
@@ -41,9 +43,17 @@ public class FinishDialog : MonoBehaviour
     }
 
     private IEnumerator CalculatePoints() {
-        int timeBonus = Mathf.Max((300 - timer.GetSeconds()) * 55, 0);
-        int carrotBonus = player.GetCarrotsPicked() * 1000;
-        int collisionPenalty = -player.GetCollisionCount() * 100;
+        GameMode gameMode = gameModeComponent.GetGameMode();
+        
+        int timeBonus = 0;
+        if (timer) {
+            timeBonus = Mathf.Max((300 - timer.GetSeconds()) * 55, 0);
+        }
+        if (distanceCalculator) {
+            timeBonus = distanceCalculator.GetPoints();
+        }
+        int carrotBonus = gameMode.CarrotBonus();
+        int collisionPenalty = gameMode.CollisionPenalty();
         var timeBonusRoutine = CountTo(timeBonus, timeBonusText);
         var carrotBonusRoutine = CountTo(carrotBonus, carrotBonusText);
         var collisionPenaltyRoutine = CountTo(collisionPenalty, collisionPenaltyText);

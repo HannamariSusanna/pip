@@ -45,7 +45,7 @@ class PoissonDiscSampling {
         return points;
     }
     static bool IsValid(Vector3 candidate, Vector2 sampleRegionSize, float cellSize, float[] radiuses, List<Vector3> points, int[,] grid) {
-        float radius = candidate.z;
+        float radius = candidate.z/2;
         if (candidate.x - radius >= 0 && candidate.x + radius < sampleRegionSize.x && candidate.y - radius >= 0 && candidate.y + radius < sampleRegionSize.y) {
             int cellX = (int)(candidate.x / cellSize);
             int cellY = (int)(candidate.y / cellSize);

@@ -27,7 +27,14 @@ public class CometUpdater : MonoBehaviour
         body.AddForce(direction * moveSpeed);
     }
 
-    void OnCollisionExit2D() {
+    void OnCollisionEnter2D() {
+        RotateToMovementDir();
+    }
+    void OnCollisionStay2D() {
+        RotateToMovementDir();
+    }
+    
+    private void RotateToMovementDir() {
         Vector3 dir = new Vector3(body.velocity.normalized.x, body.velocity.normalized.y, 0f);
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg + 135;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);

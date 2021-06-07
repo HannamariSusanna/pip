@@ -17,7 +17,11 @@ public class DistancePointsCalculator : MonoBehaviour
     void Update()
     {
         maxDistance = Mathf.Max(maxDistance, Vector3.Distance(start, player.position));
-        int points = Mathf.FloorToInt(maxDistance);
+        int points = GetPoints();
         tm.text = points.ToString();
+    }
+
+    public int GetPoints() {
+        return Mathf.FloorToInt(maxDistance);
     }
 }

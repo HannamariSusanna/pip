@@ -2,47 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public abstract class Player : MonoBehaviour
 {
   public Rigidbody2D body;
   public Animator animator;
-  public ParticleSystem dustParticles;
-  public EnergyBar energyBar;
   public HealthBar healthBar;
   public PauseDialog pauseDialog;
   public GameObject finishDialog;
+  public Ability ability;
 
   public float agility = 5f;
   public float moveSpeed = 15f;
-  public float boostSpeed = 3f;
   public int energyRechargeRate = 25;
-  public int boostEnergyCost = 100;
+  
   public int maxHealth = 3;
   public int currentHealth = 3;
   public int invulnerableTimeAfterHit = 2;
 
   public int maxEnergy = 100;
-  public float currentEnergy = 100f;
-  private bool consumingEnergy = false;
-
-  private bool upDown = false;
-  private bool downDown = false;
   private int carrotsPicked = 0;
   private int collisions = 0;
   private bool invulnerable = false;
+  private bool upDown = false;
+  private bool downDown = false;
+  private float sqrMaxVelocity;
 
-  void Start() {
-    currentEnergy = maxEnergy;
+  protected void Start() {
     currentHealth = maxHealth;
-    energyBar.SetMaxEnergy(maxEnergy);
     healthBar.SetMaxHealth(maxHealth);
+    sqrMaxVelocity = (transform.right * moveSpeed).sqrMagnitude;
   }
 
-  // Update is called once per frame
-  void Update()
-  {
-    RechargeEnergy();
-
+  void Update() {
     if (Input.touchCount > 0) {
       Touch touch = Input.GetTouch(0);
       if (touch.phase == TouchPhase.Moved) {
@@ -55,7 +46,7 @@ public class Player : MonoBehaviour
         rotation.z -= (currentAngle - deltaAngle);
         transform.eulerAngles = rotation;
       } else if (touch.tapCount == 2) {
-        Boost();
+          ability.Use();
       }
     } else if (upDown || Input.GetKeyDown(KeyCode.UpArrow)) {
       upDown = true;
@@ -68,7 +59,7 @@ public class Player : MonoBehaviour
       rotation.z -= 10f * agility * Time.deltaTime;
       transform.eulerAngles = rotation;
     } else if (Input.GetKeyDown(KeyCode.RightArrow)) {
-      Boost();
+      ability.Use();
     } else if (Input.GetKeyDown(KeyCode.Escape)) {
       if (!pauseDialog.IsPaused()) {
         pauseDialog.PauseGame();
@@ -86,9 +77,9 @@ public class Player : MonoBehaviour
   }
 
   void FixedUpdate() {
-    body.AddForce(transform.right * moveSpeed);
-    var main = dustParticles.main;
-    main.simulationSpeed = body.velocity.magnitude + 0.1f;
+    if (body.velocity.sqrMagnitude < sqrMaxVelocity) {
+      body.velocity = transform.right * moveSpeed;
+    }
   }
 
   void OnCollisionEnter2D(Collision2D other) {
@@ -131,28 +122,6 @@ public class Player : MonoBehaviour
         finishDialog.SetActive(true);
       }
       collisions += 1;
-    }
-  }
-
-  private void Boost() {
-    if (currentEnergy >= boostEnergyCost) {
-      body.AddForce(transform.right * boostSpeed, ForceMode2D.Impulse);
-      currentEnergy -= boostEnergyCost;
-      energyBar.SetEnergy(Mathf.RoundToInt(currentEnergy));
-      if (currentEnergy < boostEnergyCost) {
-        energyBar.Disabled();
-      }
-    }
-  }
-
-  private void RechargeEnergy() {
-    if (!consumingEnergy && currentEnergy < maxEnergy) {
-      currentEnergy += energyRechargeRate * Time.deltaTime;
-      currentEnergy = Mathf.Min(maxEnergy, currentEnergy);
-      energyBar.SetEnergy(Mathf.RoundToInt(currentEnergy));
-      if (currentEnergy >= boostEnergyCost) {
-        energyBar.Enabled();
-      }
     }
   }
 }

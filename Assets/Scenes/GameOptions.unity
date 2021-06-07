@@ -1727,7 +1727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1829,7 +1829,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1909576016}
   m_OnClick:
     m_PersistentCalls:
@@ -1932,7 +1932,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1971790290}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1db1856a8b6970147a8852963bfd8ce5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5207c739150b3d14d8bb0235695567d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1971790293
