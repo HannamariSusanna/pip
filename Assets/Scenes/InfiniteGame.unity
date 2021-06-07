@@ -5628,7 +5628,7 @@ Camera:
   far clip plane: 5000
   field of view: 60
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -6394,7 +6394,7 @@ MonoBehaviour:
   regionSize: {x: 17, y: 17}
   rejectionSamples: 10
   poolSizePerAsteroidType: 20
-  seed: 2002
+  seed: 1984
   level: 1
   simulateAsteroids: 0
 --- !u!1 &1124684782
@@ -6961,7 +6961,7 @@ Transform:
   m_GameObject: {fileID: 1434585910}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 50, y: 50, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 434794886}
   m_Father: {fileID: 722769149}
@@ -7002,14 +7002,14 @@ MonoBehaviour:
   m_Follow: {fileID: 345467088}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 7
+    OrthographicSize: 6
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.7767695, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

@@ -9,11 +9,19 @@ public class GameModeComponent : MonoBehaviour {
     public GameObject player;
     private GameMode selection;
 
-    public void Awake() {
+    public void Start() {
+        InitializeGameMode();
         InitializeCharacter();
     }
     
     public void OnValidate() {
+        InitializeGameMode();
+    }
+    public GameMode GetGameMode() {
+        return selection;
+    }
+
+    private void InitializeGameMode() {
         switch (gameMode) {
             case GameModeSelector.GameModes.standard:
                 selection = new StandardGameMode();
@@ -26,11 +34,9 @@ public class GameModeComponent : MonoBehaviour {
                 break;
         }
     }
-    public GameMode GetGameMode() {
-        return selection;
-    }
 
     private void InitializeCharacter() {
+        int selected = (int)CharacterSelector.selection;
         GameObject playerPrefab = characterPrefabs[(int)CharacterSelector.selection];
         GameObject p = Instantiate(playerPrefab, player.transform.parent.transform);
         player.transform.SetParent(p.transform);
