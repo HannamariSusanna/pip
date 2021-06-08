@@ -1571,7 +1571,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7767695, y: 1}
+    m_SensorSize: {x: 1.7373737, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -20409,9 +20409,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseDialog
       objectReference: {fileID: 0}
+    - target: {fileID: 7987980123067206899, guid: dfffce5ce1fdc504a8ce7c5763d1bd1c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7987980123325134967, guid: dfffce5ce1fdc504a8ce7c5763d1bd1c, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: -4643249537325830537, guid: b493e87a67c4d6e4e8a261e69b446c15, type: 2}
+      objectReference: {fileID: -7894066455382643350, guid: 9d50ba4f3420df24cba2a0a95d0c0fd1, type: 2}
+    - target: {fileID: 7987980123325134967, guid: dfffce5ce1fdc504a8ce7c5763d1bd1c, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 9d50ba4f3420df24cba2a0a95d0c0fd1, type: 2}
+    - target: {fileID: 7987980123662954870, guid: dfffce5ce1fdc504a8ce7c5763d1bd1c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 378.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7987980123662954871, guid: dfffce5ce1fdc504a8ce7c5763d1bd1c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4367732871754573918, guid: b41880ff505d1bb4396d119497249ba5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfffce5ce1fdc504a8ce7c5763d1bd1c, type: 3}
