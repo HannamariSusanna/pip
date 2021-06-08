@@ -8,7 +8,7 @@ public class AsteroidGenerator : MonoBehaviour
     public GameObject[] mediumAsteroidPrefabs;
     public GameObject[] smallAsteroidPrefabs;
     public DeployComet cometDeployer;
-    public DistancePointsCalculator pointsCalculator;
+    public DistanceCalculator distanceCalculator;
     public TMPro.TextMeshProUGUI levelText;
   
     public Transform player;
@@ -96,7 +96,7 @@ public class AsteroidGenerator : MonoBehaviour
     }
 
     private void CheckForLevelUp() {
-        var travelDistance = pointsCalculator.maxDistance;
+        var travelDistance = distanceCalculator.GetGameModePoints();
         var nextLevel = Mathf.RoundToInt(travelDistance / (40 * Mathf.Log10(travelDistance + 2))) + 1;
         if (nextLevel != level) {
             levelText.text = "Level " + nextLevel;

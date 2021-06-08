@@ -7,8 +7,6 @@ public abstract class Player : MonoBehaviour
   public Rigidbody2D body;
   public Animator animator;
   public HealthBar healthBar;
-  public PauseDialog pauseDialog;
-  public GameObject finishDialog;
   public Ability ability;
 
   public float agility = 5f;
@@ -18,8 +16,9 @@ public abstract class Player : MonoBehaviour
   public int maxHealth = 3;
   public int currentHealth = 3;
   public int invulnerableTimeAfterHit = 2;
-
   public int maxEnergy = 100;
+
+  private GameMode gameMode;
   private int carrotsPicked = 0;
   private int collisions = 0;
   private bool invulnerable = false;
@@ -60,12 +59,6 @@ public abstract class Player : MonoBehaviour
       transform.eulerAngles = rotation;
     } else if (Input.GetKeyDown(KeyCode.RightArrow)) {
       ability.Use();
-    } else if (Input.GetKeyDown(KeyCode.Escape)) {
-      if (!pauseDialog.IsPaused()) {
-        pauseDialog.PauseGame();
-      } else{
-        pauseDialog.ContinueGame();
-      }
     }
 
     if (Input.GetKeyUp(KeyCode.UpArrow)) {
@@ -90,9 +83,9 @@ public abstract class Player : MonoBehaviour
     animator.SetBool("IsHit", false);
   }
 
-  private void OnTriggerEnter2D(Collider2D other) {
+  void OnTriggerEnter2D(Collider2D other) {
     if (other.CompareTag("Carrot")) {
-      carrotsPicked += 1;
+      gameMode.IncreaseCarrotsPicked(1);
     }
   }
 
@@ -102,6 +95,10 @@ public abstract class Player : MonoBehaviour
     yield return new WaitForSeconds(seconds);
     invulnerable = false;
     healthBar.Enabled();
+  }
+
+  public void SetGameMode(GameMode gameMode) {
+    this.gameMode = gameMode;
   }
 
   public int GetCarrotsPicked() {
@@ -118,10 +115,7 @@ public abstract class Player : MonoBehaviour
       healthBar.SetHealth(currentHealth);
       StartCoroutine(InvulnerableTimeout(invulnerableTimeAfterHit));
     } else if (!invulnerable) {
-      if (finishDialog != null) {
-        finishDialog.SetActive(true);
-      }
-      collisions += 1;
+      gameMode.IncreaseCollisions(1);
     }
   }
 }

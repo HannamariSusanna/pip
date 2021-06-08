@@ -158,8 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 2091458817784036868}
   animator: {fileID: 2091458817784036892}
-  healthBar: {fileID: 0}
-  pauseDialog: {fileID: 0}
+  healthBar: {fileID: 6784252839556050045, guid: 9774fa41e82f60746abd92192378987f, type: 3}
   finishDialog: {fileID: 0}
   ability: {fileID: 6291027283827550396}
   agility: 5

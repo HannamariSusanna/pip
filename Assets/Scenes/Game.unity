@@ -1055,6 +1055,11 @@ MonoBehaviour:
   - {fileID: 216938460}
   - {fileID: 283819645}
   player: {fileID: 1823411598}
+  finishDialog: {fileID: 1297630482}
+  pointsCalculator: {fileID: 279417963}
+  carrotBonus: 900
+  collisionPenalty: -100
+  collisionsAllowedAfterHealthLoss: 1
 --- !u!4 &656419149
 Transform:
   m_ObjectHideFlags: 0
@@ -1566,7 +1571,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.7767695, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -6834,6 +6839,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3316424748086910753, guid: fe1b6c194a26fae45adbef1e50f3c315, type: 3}
   m_PrefabInstance: {fileID: 3316424749115021872}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1297630482 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3316424748086910754, guid: fe1b6c194a26fae45adbef1e50f3c315, type: 3}
+  m_PrefabInstance: {fileID: 3316424749115021872}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297630480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5f383dad366e7e49b2162cd189c79a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1370808101
 PrefabInstance:
   m_ObjectHideFlags: 0

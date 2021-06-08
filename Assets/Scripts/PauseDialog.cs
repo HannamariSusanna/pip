@@ -5,8 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class PauseDialog : MonoBehaviour
 {
-
+    public GameObject container;
     private bool isPaused = false;
+
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            if (!IsPaused()) {
+                PauseGame();
+            } else{
+                ContinueGame();
+            }
+        }
+    }
 
     public void FinishLevel() {
         gameObject.SetActive(false);
@@ -25,12 +35,12 @@ public class PauseDialog : MonoBehaviour
     }
 
     public void PauseGame() {
-        gameObject.SetActive(true);
+        container.SetActive(true);
         Time.timeScale = 0;
         isPaused = true;
     } 
     public void ContinueGame() {
-        gameObject.SetActive(false);
+        container.SetActive(false);
         Time.timeScale = 1;
         isPaused = false;
     }

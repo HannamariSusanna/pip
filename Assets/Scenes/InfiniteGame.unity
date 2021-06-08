@@ -5739,6 +5739,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseDialog
       objectReference: {fileID: 0}
+    - target: {fileID: 7987980123067206899, guid: dfffce5ce1fdc504a8ce7c5763d1bd1c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfffce5ce1fdc504a8ce7c5763d1bd1c, type: 3}
 --- !u!1 &603277495
@@ -5813,9 +5817,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 762793307}
+  - component: {fileID: 762793304}
   - component: {fileID: 762793306}
   - component: {fileID: 762793305}
-  - component: {fileID: 762793304}
   m_Layer: 5
   m_Name: Points
   m_TagString: Untagged
@@ -5837,8 +5841,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 345467088}
   tm: {fileID: 762793305}
-  maxDistance: 0
-  start: {x: 0, y: 0, z: 0}
 --- !u!114 &762793305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6094,6 +6096,11 @@ MonoBehaviour:
   - {fileID: 1728208128}
   - {fileID: 5528550171053538207}
   player: {fileID: 345467087}
+  finishDialog: {fileID: 1530350889}
+  pointsCalculator: {fileID: 762793303}
+  carrotBonus: 20
+  collisionPenalty: -100
+  collisionsAllowedAfterHealthLoss: 0
 --- !u!4 &862238607
 Transform:
   m_ObjectHideFlags: 0
@@ -6384,7 +6391,7 @@ MonoBehaviour:
   - {fileID: 4037772597260803959, guid: f796b9406e456c747952b1de9bd4e3ae, type: 3}
   - {fileID: 9011523060558866218, guid: 00ba427d5078eb447b9d65efe174adfc, type: 3}
   cometDeployer: {fileID: 907090073}
-  pointsCalculator: {fileID: 762793304}
+  distanceCalculator: {fileID: 762793304}
   levelText: {fileID: 1322818778}
   player: {fileID: 345467088}
   radiuses:
@@ -7068,6 +7075,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3316424748086910752, guid: fe1b6c194a26fae45adbef1e50f3c315, type: 3}
   m_PrefabInstance: {fileID: 31873421}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1530350889 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3316424748086910754, guid: fe1b6c194a26fae45adbef1e50f3c315, type: 3}
+  m_PrefabInstance: {fileID: 31873421}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530350888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5f383dad366e7e49b2162cd189c79a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1665693347
 GameObject:
   m_ObjectHideFlags: 0

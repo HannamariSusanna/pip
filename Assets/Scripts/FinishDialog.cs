@@ -10,11 +10,17 @@ public class FinishDialog : MonoBehaviour
     public TMPro.TextMeshProUGUI carrotBonusText;
     public TMPro.TextMeshProUGUI collisionPenaltyText;
     public TMPro.TextMeshProUGUI totalText;
-    public Timer timer;
-    public DistancePointsCalculator distanceCalculator;
     public float duration = 0.5f;
 
-    public GameModeComponent gameModeComponent;
+    private GameMode gameMode;
+
+    public void Show() {
+        gameObject.SetActive(true);
+    }
+    
+    public void SetGameMode(GameMode gameMode) {
+        this.gameMode = gameMode;
+    }
 
     public void OnEnable() {
         PauseGame();
@@ -43,21 +49,13 @@ public class FinishDialog : MonoBehaviour
     }
 
     private IEnumerator CalculatePoints() {
-        GameMode gameMode = gameModeComponent.GetGameMode();
-        
-        int timeBonus = 0;
-        if (timer) {
-            timeBonus = Mathf.Max((300 - timer.GetSeconds()) * 55, 0);
-        }
-        if (distanceCalculator) {
-            timeBonus = distanceCalculator.GetPoints();
-        }
-        int carrotBonus = gameMode.CarrotBonus();
-        int collisionPenalty = gameMode.CollisionPenalty();
-        var timeBonusRoutine = CountTo(timeBonus, timeBonusText);
+        int gameModeBonus = gameMode.GetGameModeBonus();
+        int carrotBonus = gameMode.GetCarrotBonus();
+        int collisionPenalty = gameMode.GetCollisionPenalty();
+        var timeBonusRoutine = CountTo(gameModeBonus, timeBonusText);
         var carrotBonusRoutine = CountTo(carrotBonus, carrotBonusText);
         var collisionPenaltyRoutine = CountTo(collisionPenalty, collisionPenaltyText);
-        int total = timeBonus + carrotBonus + collisionPenalty;
+        int total = gameModeBonus + carrotBonus + collisionPenalty;
         var totalRoutine = CountTo(total, totalText);
         yield return StartCoroutine(timeBonusRoutine);
         yield return StartCoroutine(carrotBonusRoutine);

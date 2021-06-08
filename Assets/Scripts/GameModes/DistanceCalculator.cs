@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DistancePointsCalculator : MonoBehaviour
+public class DistanceCalculator : MonoBehaviour, PointsCalculator
 {
     public Transform player;
     public TMPro.TextMeshProUGUI tm;
-    public float maxDistance = 0;
-    public Vector3 start;
+    private float maxDistance = 0;
+    private Vector3 start;
 
     void Start() {
         start = new Vector3(player.position.x, player.position.y, 0f);
@@ -17,11 +17,11 @@ public class DistancePointsCalculator : MonoBehaviour
     void Update()
     {
         maxDistance = Mathf.Max(maxDistance, Vector3.Distance(start, player.position));
-        int points = GetPoints();
+        int points = GetGameModePoints();
         tm.text = points.ToString();
     }
 
-    public int GetPoints() {
+    public int GetGameModePoints() {
         return Mathf.FloorToInt(maxDistance);
     }
 }

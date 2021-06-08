@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Timer : MonoBehaviour
+public class Timer : MonoBehaviour, PointsCalculator
 {
     public TMPro.TextMeshProUGUI tm;
     private float secondsElapsed = 0;
@@ -18,5 +18,9 @@ public class Timer : MonoBehaviour
 
     public int GetSeconds() {
         return Mathf.RoundToInt(secondsElapsed);
+    }
+
+    public int GetGameModePoints() {
+        return Mathf.Max((300 - GetSeconds()) * 55, 0);
     }
 }

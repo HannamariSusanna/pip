@@ -7,6 +7,12 @@ public class GameModeComponent : MonoBehaviour {
     public GameModeSelector.GameModes gameMode;
     public GameObject[] characterPrefabs;
     public GameObject player;
+    public FinishDialog finishDialog;
+    public GameObject pointsCalculator;
+    public int carrotBonus = 100;
+    public int collisionPenalty = -100;
+    public bool collisionsAllowedAfterHealthLoss = false;
+
     private GameMode selection;
 
     public void Start() {
@@ -33,6 +39,12 @@ public class GameModeComponent : MonoBehaviour {
                 selection = new StandardGameMode();
                 break;
         }
+
+        selection.SetFinishDialog(finishDialog);
+        selection.SetCarrotBonus(carrotBonus);
+        selection.SetCollisionPenalty(collisionPenalty);
+        selection.SetCollisionsAllowedAfterHealthLoss(collisionsAllowedAfterHealthLoss);
+        selection.SetPointsCalculator(pointsCalculator);
     }
 
     private void InitializeCharacter() {
@@ -40,6 +52,8 @@ public class GameModeComponent : MonoBehaviour {
         GameObject playerPrefab = characterPrefabs[(int)CharacterSelector.selection];
         GameObject p = Instantiate(playerPrefab, player.transform.parent.transform);
         player.transform.SetParent(p.transform);
-        selection.SetPlayer(p.GetComponent<Player>());
+        Player playerScript = p.GetComponent<Player>();
+        selection.SetPlayer(playerScript);
+        playerScript.SetGameMode(selection);
     }
 }
