@@ -1592,10 +1592,7 @@ MonoBehaviour:
   carrotBonusText: {fileID: 3316424747159825546}
   collisionPenaltyText: {fileID: 3316424747978126198}
   totalText: {fileID: 3316424748181894858}
-  timer: {fileID: 0}
-  distanceCalculator: {fileID: 0}
   duration: 0.5
-  gameModeComponent: {fileID: 0}
 --- !u!1 &3316424748142615879
 GameObject:
   m_ObjectHideFlags: 0

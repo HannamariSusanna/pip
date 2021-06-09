@@ -10,7 +10,7 @@ public abstract class Player : MonoBehaviour
   public Ability ability;
 
   public float agility = 5f;
-  public float moveSpeed = 15f;
+  public float moveSpeed = 1f;
   public int energyRechargeRate = 25;
   
   public int maxHealth = 3;
@@ -30,6 +30,7 @@ public abstract class Player : MonoBehaviour
     currentHealth = maxHealth;
     healthBar.SetMaxHealth(maxHealth);
     sqrMaxVelocity = (transform.right * moveSpeed).sqrMagnitude;
+    ability.SetPlayer(this);
   }
 
   void Update() {
@@ -85,6 +86,7 @@ public abstract class Player : MonoBehaviour
 
   void OnTriggerEnter2D(Collider2D other) {
     if (other.CompareTag("Carrot")) {
+      animator.SetTrigger("Carrot");
       gameMode.IncreaseCarrotsPicked(1);
     }
   }
@@ -117,5 +119,9 @@ public abstract class Player : MonoBehaviour
     } else if (!invulnerable) {
       gameMode.IncreaseCollisions(1);
     }
+  }
+
+  public float GetSqrMaxVelocity() {
+    return sqrMaxVelocity;
   }
 }

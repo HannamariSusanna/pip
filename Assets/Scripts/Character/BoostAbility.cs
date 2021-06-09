@@ -7,13 +7,17 @@ public class BoostAbility : Ability {
     new void Update() {
         base.Update();
         if (isActive) {
-            playerBody.AddForce(transform.right * boostSpeed, ForceMode2D.Impulse);
+            player.body.AddForce(transform.right * boostSpeed, ForceMode2D.Impulse);
             isActive = false;
+        }
+        if (player.body.velocity.sqrMagnitude <= player.GetSqrMaxVelocity() && player.animator.GetBool("BoostActive")) {
+            player.animator.SetBool("BoostActive", false);
         }
     }
 
     public override void Use() {
         if (currentEnergy >= energyCost) {
+            player.animator.SetBool("BoostActive", true);
             isActive = true;
             currentEnergy -= energyCost;
             energyBar.SetEnergy(Mathf.RoundToInt(currentEnergy));

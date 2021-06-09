@@ -11,9 +11,11 @@ public class Compass : MonoBehaviour
     public Camera uiCamera;
     
     private CanvasRenderer canvasRenderer;
+    private Vector3 originalPos;
 
     void Start() {
         canvasRenderer = GetComponent<CanvasRenderer>();
+        originalPos = compass.position;
     }
 
     // Update is called once per frame
@@ -27,19 +29,12 @@ public class Compass : MonoBehaviour
             targetPositionScreenPoint.y > Screen.height -compassOffset;
         
         if (isOffScreen) {
+            // Show the needle
             canvasRenderer.SetAlpha(255f);
             RotateTowardsTarget();
-
-            Vector3 cappedTargetScreenPosition = targetPositionScreenPoint;
-            if (cappedTargetScreenPosition.x <= compassOffset) cappedTargetScreenPosition.x = compassOffset;
-            if (cappedTargetScreenPosition.x >= Screen.width - compassOffset) cappedTargetScreenPosition.x = Screen.width - compassOffset;
-            if (cappedTargetScreenPosition.y <= compassOffset) cappedTargetScreenPosition.y = compassOffset;
-            if (cappedTargetScreenPosition.y >= Screen.height - compassOffset) cappedTargetScreenPosition.y = Screen.height - compassOffset;
-
-            Vector3 pointerWorldPosition = uiCamera.ScreenToWorldPoint(cappedTargetScreenPosition);
-            compass.position = pointerWorldPosition;
-            compass.localPosition = new Vector3(compass.localPosition.x, compass.localPosition.y, 0f);
+            compass.position = originalPos;
         } else {
+            // Hide the needle
             canvasRenderer.SetAlpha(0f);
             Vector3 pointerWorldPosition = uiCamera.ScreenToWorldPoint(targetPositionScreenPoint);
             compass.position = pointerWorldPosition;

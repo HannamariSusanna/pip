@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 2091458817784036866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.12, y: -0.13, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children:
   - {fileID: 2091458818038314756}
   - {fileID: 5975086912016863818}
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 564549533
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2184277102450767653, guid: 273ea1ab819abf24b978d019d941fc96, type: 3}
+  m_Sprite: {fileID: -417436994572597314, guid: b41880ff505d1bb4396d119497249ba5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -125,9 +125,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.32485533, y: 0.20395422}
+  m_Offset: {x: 0.60307574, y: 0.31306005}
   serializedVersion: 2
-  m_Radius: 0.5512996
+  m_Radius: 0.98226804
 --- !u!70 &2091458817784036891
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -141,8 +141,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.31263372, y: -0.44337076}
-  m_Size: {x: 1.1847348, y: 0.66178465}
+  m_Offset: {x: -0.47083682, y: -0.57975346}
+  m_Size: {x: 2.0466776, y: 1.2836924}
   m_Direction: 1
 --- !u!114 &8706803466204283330
 MonoBehaviour:
@@ -158,8 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 2091458817784036868}
   animator: {fileID: 2091458817784036892}
-  healthBar: {fileID: 6784252839556050045, guid: 9774fa41e82f60746abd92192378987f, type: 3}
-  finishDialog: {fileID: 0}
+  healthBar: {fileID: 0}
   ability: {fileID: 6291027283827550396}
   agility: 5
   moveSpeed: 1.5
@@ -5093,7 +5092,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   energyBar: {fileID: 0}
-  playerBody: {fileID: 2091458817784036868}
   energyCost: 60
   boostSpeed: 60
 --- !u!1 &5975086912016863819

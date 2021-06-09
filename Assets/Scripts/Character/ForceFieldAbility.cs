@@ -8,10 +8,11 @@ public class ForceFieldAbility : Ability {
     public Collider2D shieldCollider;
     public Rigidbody2D shieldBody;
 
-    void Start() {
+    new void Start() {
+        base.Start();
         DisableForceField();
         var main = ps.main;
-        main.startLifetime = maxEnergy / consumeRate;
+        main.startLifetime = player.maxEnergy / consumeRate;
     }
 
     new void Update() {
