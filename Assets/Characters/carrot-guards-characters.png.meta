@@ -1,0 +1,958 @@
+fileFormatVersion: 2
+guid: 1cdaccae3cc0fa749a44a0ca0610fe1c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2479522328006884551
+    second: carrot-guards-characters_0
+  - first:
+      213: -798389541108039205
+    second: carrot-guards-characters_1
+  - first:
+      213: 3746850316029753423
+    second: carrot-guards-characters_2
+  - first:
+      213: -5775946103987450276
+    second: carrot-guards-characters_3
+  - first:
+      213: -2673612126327311907
+    second: carrot-guards-characters_4
+  - first:
+      213: -5845613858837155793
+    second: carrot-guards-characters_5
+  - first:
+      213: 4068432555372811977
+    second: carrot-guards-characters_6
+  - first:
+      213: 7792614474781324484
+    second: carrot-guards-characters_7
+  - first:
+      213: -6215775014189897429
+    second: carrot-guards-characters_8
+  - first:
+      213: 5808756885238513173
+    second: carrot-guards-characters_9
+  - first:
+      213: -2795764572613908753
+    second: carrot-guards-characters_10
+  - first:
+      213: -4486474695407777948
+    second: carrot-guards-characters_11
+  - first:
+      213: 5730938155283190414
+    second: carrot-guards-characters_12
+  - first:
+      213: -392349623686416972
+    second: carrot-guards-characters_13
+  - first:
+      213: -1544973048138801471
+    second: carrot-guards-characters_14
+  - first:
+      213: 1308075310326626993
+    second: carrot-guards-characters_15
+  - first:
+      213: 3451117616219320625
+    second: carrot-guards-characters_16
+  - first:
+      213: 849159502358813559
+    second: carrot-guards-characters_17
+  - first:
+      213: -3548299347971872284
+    second: carrot-guards-characters_18
+  - first:
+      213: -1138945045934551913
+    second: carrot-guards-characters_19
+  - first:
+      213: 7585867537592587922
+    second: carrot-guards-characters_20
+  - first:
+      213: -1092404823879009923
+    second: carrot-guards-characters_21
+  - first:
+      213: 8398399841627083774
+    second: carrot-guards-characters_22
+  - first:
+      213: 2755779646022973182
+    second: carrot-guards-characters_23
+  - first:
+      213: -6512623716330140518
+    second: carrot-guards-characters_24
+  - first:
+      213: -8397420921428095621
+    second: carrot-guards-characters_25
+  - first:
+      213: 7072977010952454577
+    second: carrot-guards-characters_26
+  - first:
+      213: 5612747189340609991
+    second: carrot-guards-characters_27
+  - first:
+      213: 6131863316642570467
+    second: carrot-guards-characters_28
+  - first:
+      213: -1772451127593072236
+    second: carrot-guards-characters_29
+  - first:
+      213: -6778623960992177142
+    second: carrot-guards-characters_30
+  - first:
+      213: 2148273980989369258
+    second: carrot-guards-characters_31
+  - first:
+      213: 3166757603958173131
+    second: carrot-guards-characters_32
+  - first:
+      213: 7579561009981329958
+    second: carrot-guards-characters_33
+  - first:
+      213: 5144160215929712401
+    second: carrot-guards-characters_34
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: carrot-guards-characters_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 760
+        width: 105
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 933008a6497f69dd0800000000000000
+      internalID: -2479522328006884551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_1
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 761
+        width: 108
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd14ed141fc8be4f0800000000000000
+      internalID: -798389541108039205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_2
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 762
+        width: 107
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f487381c28c7ff330800000000000000
+      internalID: 3746850316029753423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_3
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 762
+        width: 109
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5ec606ee97b7dfa0800000000000000
+      internalID: -5775946103987450276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_4
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 780
+        width: 126
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd1751fbfeb65ead0800000000000000
+      internalID: -2673612126327311907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_5
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 778
+        width: 126
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2039e1ba2530eea0800000000000000
+      internalID: -5845613858837155793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_6
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 696
+        width: 191
+        height: 240
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c691a78ad9f57830800000000000000
+      internalID: 4068432555372811977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_7
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 693
+        width: 191
+        height: 243
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c478e8e39de42c60800000000000000
+      internalID: 7792614474781324484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_8
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 546
+        width: 107
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b296673ae812db9a0800000000000000
+      internalID: -6215775014189897429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_9
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 545
+        width: 109
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51efe3b6c99dc9050800000000000000
+      internalID: 5808756885238513173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_10
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 547
+        width: 107
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe6e9bd0fe27339d0800000000000000
+      internalID: -2795764572613908753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_11
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 547
+        width: 107
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 467c07ee807dcb1c0800000000000000
+      internalID: -4486474695407777948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_12
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 552
+        width: 124
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e82136f63e1688f40800000000000000
+      internalID: 5730938155283190414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_13
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 556
+        width: 129
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b5b96498181e8af0800000000000000
+      internalID: -392349623686416972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_14
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 409
+        width: 160
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ce5226c2372f8ae0800000000000000
+      internalID: -1544973048138801471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_15
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 621
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ba3a737097372210800000000000000
+      internalID: 1308075310326626993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_16
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 384
+        width: 175
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13178d8ef25d4ef20800000000000000
+      internalID: 3451117616219320625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_17
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 375
+        width: 163
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77b9ebf7112d8cb00800000000000000
+      internalID: 849159502358813559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_18
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 376
+        width: 205
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e9e26fea88e1cec0800000000000000
+      internalID: -3548299347971872284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_19
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 395
+        width: 193
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79c416ed387a130f0800000000000000
+      internalID: -1138945045934551913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_20
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 220
+        width: 162
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2969f53755a664960800000000000000
+      internalID: 7585867537592587922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_21
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 215
+        width: 163
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d79b4c9b99ff6d0f0800000000000000
+      internalID: -1092404823879009923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_22
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 236
+        width: 248
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef311e9c82c1d8470800000000000000
+      internalID: 8398399841627083774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_23
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 259
+        width: 23
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef67370ccfe7e3620800000000000000
+      internalID: 2755779646022973182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_24
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 259
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c8b504c338e95a0800000000000000
+      internalID: -6512623716330140518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_25
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 271
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d48d4d92e567b80800000000000000
+      internalID: -8397420921428095621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_26
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 233
+        width: 205
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b143520e13482260800000000000000
+      internalID: 7072977010952454577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_27
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 231
+        width: 205
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cd18b2c4db74ed40800000000000000
+      internalID: 5612747189340609991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_28
+      rect:
+        serializedVersion: 2
+        x: 1147
+        y: 227
+        width: 205
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e0aabfc231c81550800000000000000
+      internalID: 6131863316642570467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_29
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 44
+        width: 163
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 499031e171df667e0800000000000000
+      internalID: -1772451127593072236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_30
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 41
+        width: 161
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a042c131c6d7de1a0800000000000000
+      internalID: -6778623960992177142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_31
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 34
+        width: 164
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aabe51dbdc330dd10800000000000000
+      internalID: 2148273980989369258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_32
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 26
+        width: 194
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcda1b9334592fb20800000000000000
+      internalID: 3166757603958173131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_33
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 18
+        width: 194
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62296519492003960800000000000000
+      internalID: 7579561009981329958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: carrot-guards-characters_34
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 22
+        width: 194
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11fef22267ab36740800000000000000
+      internalID: 5144160215929712401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
