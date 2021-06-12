@@ -18,10 +18,10 @@ public class HealthBar : MonoBehaviour
     }
 
     public void Disabled() {
-        fill.color = Color.white;
+        fill.color = Color.gray;
     }
 
     public void Enabled() {
-        fill.color = Color.red;
+        fill.color = Color.white;
     }
 }
