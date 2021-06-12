@@ -49,7 +49,7 @@ public abstract class GameMode {
   }
 
   public void IncreaseCollisions(int amount) {
-    if (!collisionsAllowedAfterHealthLoss && player.currentHealth <= 0) {
+    if (!collisionsAllowedAfterHealthLoss && player.GetCurrentHealth() <= 0) {
       finishDialog.Show();
     } else {
       this.collisions += amount;

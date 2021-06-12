@@ -14,9 +14,10 @@ public abstract class Player : MonoBehaviour
   public int energyRechargeRate = 25;
   
   public int maxHealth = 3;
-  public int currentHealth = 3;
+  
   public int invulnerableTimeAfterHit = 2;
   public int maxEnergy = 100;
+  protected int currentHealth = 3;
 
   private GameMode gameMode;
   private int carrotsPicked = 0;
@@ -71,9 +72,7 @@ public abstract class Player : MonoBehaviour
   }
 
   void FixedUpdate() {
-    if (body.velocity.sqrMagnitude < sqrMaxVelocity) {
-      body.velocity = transform.right * moveSpeed;
-    }
+    body.AddForce(transform.right * moveSpeed);
   }
 
   void OnCollisionEnter2D(Collision2D other) {
@@ -122,6 +121,10 @@ public abstract class Player : MonoBehaviour
   }
 
   public float GetSqrMaxVelocity() {
-    return sqrMaxVelocity;
+    return sqrMaxVelocity * Time.deltaTime;
+  }
+
+  public int GetCurrentHealth() {
+    return currentHealth;
   }
 }

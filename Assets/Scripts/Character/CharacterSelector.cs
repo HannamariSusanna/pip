@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class CharacterSelector : MonoBehaviour
 {
-    public enum Character { bunny = 0, racoon = 1 }
+    public enum Character { bunny = 0, red = 1, racoon = 2 }
 
-    public static Character selection = Character.bunny;
+    public static Character selection = Character.racoon;
     
     public Sprite[] sprites;
     public GameObject selectionImage;

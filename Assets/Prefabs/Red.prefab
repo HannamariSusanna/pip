@@ -9872,7 +9872,7 @@ GameObject:
   - component: {fileID: 6737883917431687600}
   - component: {fileID: 6737883917431687596}
   - component: {fileID: 6737883917431687599}
-  - component: {fileID: 4058685068179830390}
+  - component: {fileID: 1711688029573750069}
   - component: {fileID: 6737883917431687602}
   - component: {fileID: 6737883917431687592}
   m_Layer: 9
@@ -9964,7 +9964,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 10
   m_LinearDrag: 3
-  m_AngularDrag: 0.3
+  m_AngularDrag: 10
   m_GravityScale: 2.05
   m_Material: {fileID: 0}
   m_Interpolate: 1
@@ -10003,7 +10003,7 @@ CapsuleCollider2D:
   m_Offset: {x: -0.23080477, y: -0.5470221}
   m_Size: {x: 2.155786, y: 1.174585}
   m_Direction: 1
---- !u!114 &4058685068179830390
+--- !u!114 &1711688029573750069
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10012,7 +10012,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6737883917431687606}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 467c90cc84636034390074e9a1f19aa7, type: 3}
+  m_Script: {fileID: 11500000, guid: 68b937e420c570a469a3c130c7e232a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 6737883917431687600}
@@ -10020,7 +10020,7 @@ MonoBehaviour:
   healthBar: {fileID: 6784252839556050045, guid: 9774fa41e82f60746abd92192378987f, type: 3}
   ability: {fileID: 1240916174279238108}
   agility: 5
-  moveSpeed: 2
+  moveSpeed: 50
   energyRechargeRate: 5
   maxHealth: 3
   currentHealth: 3
