@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 602b12e0d4f3d134c95a0533c5fab29a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energyBar: {fileID: 5016963973330709317, guid: f4fbb57a844b8da478a87d069ed218cc, type: 3}
+  energyBar: {fileID: 0}
   energyCost: 100
   activationEnergyRequirement: 100
   consumeRate: 50
@@ -307,7 +307,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3.5
+      scalar: 2.2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4926,7 +4926,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2.5
+  m_Radius: 1.1
 --- !u!50 &1240916174279238111
 Rigidbody2D:
   serializedVersion: 4
@@ -9891,7 +9891,7 @@ Transform:
   m_GameObject: {fileID: 6737883917431687606}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6737883916482199728}
   - {fileID: 1327535961855010302}
@@ -9964,7 +9964,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 10
   m_LinearDrag: 3
-  m_AngularDrag: 10
+  m_AngularDrag: 0.5
   m_GravityScale: 2.05
   m_Material: {fileID: 0}
   m_Interpolate: 1
@@ -9984,9 +9984,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.8976618, y: 0.34033674}
+  m_Offset: {x: 0.45, y: 0.15}
   serializedVersion: 2
-  m_Radius: 0.97681355
+  m_Radius: 0.5
 --- !u!70 &6737883917431687599
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -10000,8 +10000,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.23080477, y: -0.5470221}
-  m_Size: {x: 2.155786, y: 1.174585}
+  m_Offset: {x: -0.105688855, y: -0.2759367}
+  m_Size: {x: 1.1340139, y: 0.6324169}
   m_Direction: 1
 --- !u!114 &1711688029573750069
 MonoBehaviour:
@@ -10023,7 +10023,6 @@ MonoBehaviour:
   moveSpeed: 50
   energyRechargeRate: 5
   maxHealth: 3
-  currentHealth: 3
   invulnerableTimeAfterHit: 2
   maxEnergy: 100
 --- !u!114 &6737883917431687602
