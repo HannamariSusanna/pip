@@ -23,6 +23,12 @@ TextureImporter:
   - first:
       213: -3017919111329546355
     second: ribbons_2
+  - first:
+      213: 1739629186327716841
+    second: ribbons_4
+  - first:
+      213: 6203538399662996109
+    second: ribbons_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -130,7 +136,7 @@ TextureImporter:
         width: 193
         height: 769
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -151,7 +157,7 @@ TextureImporter:
         width: 239
         height: 426
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -172,7 +178,7 @@ TextureImporter:
         width: 85
         height: 395
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -180,6 +186,69 @@ TextureImporter:
       bones: []
       spriteID: d8ff650de823e16d0800000000000000
       internalID: -3017919111329546355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ribbons_3
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 54
+        width: 134
+        height: 264
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba998b1903f4801d0800000000000000
+      internalID: -3384368049947108949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ribbons_4
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 54
+        width: 134
+        height: 264
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e327fb2787642810800000000000000
+      internalID: 1739629186327716841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ribbons_5
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 365
+        width: 112
+        height: 395
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a78668e45671650800000000000000
+      internalID: 6203538399662996109
       vertices: []
       indices: 
       edges: []

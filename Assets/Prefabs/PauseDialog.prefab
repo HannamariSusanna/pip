@@ -765,7 +765,7 @@ GameObject:
   - component: {fileID: 7987980123662954868}
   - component: {fileID: 7987980123662954871}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Bunny
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -818,7 +818,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4367732871754573918, guid: b41880ff505d1bb4396d119497249ba5, type: 3}
+  m_Sprite: {fileID: 8398399841627083774, guid: 1cdaccae3cc0fa749a44a0ca0610fe1c, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -974,7 +974,7 @@ GameObject:
   - component: {fileID: 7987980124438216342}
   - component: {fileID: 7987980124438216337}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Moon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1027,7 +1027,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5444527576588102560, guid: ca8b5455348e57e47858944d57f0c52f, type: 3}
+  m_Sprite: {fileID: -5444527576588102560, guid: 7f221c6fb23937b48b799d83ae43baa0, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

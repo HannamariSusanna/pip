@@ -7121,7 +7121,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.7669566, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -7506,6 +7506,10 @@ PrefabInstance:
       propertyPath: moveWithCustomTransform
       value: 
       objectReference: {fileID: 345467088}
+    - target: {fileID: 1711688029573750069, guid: f84a5e5d91a8cae4793abd0aee30c99c, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 947117573}
     - target: {fileID: 6737883917431687606, guid: f84a5e5d91a8cae4793abd0aee30c99c, type: 3}
       propertyPath: m_Name
       value: Red
@@ -7904,7 +7908,7 @@ SpriteRenderer:
   m_SortingLayerID: 564549533
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b7b2626ad1c9cb7438f70061352096be, type: 3}
+  m_Sprite: {fileID: 7072977010952454577, guid: 1cdaccae3cc0fa749a44a0ca0610fe1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7986,7 +7990,7 @@ Transform:
   m_GameObject: {fileID: 9079968667131940527}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9079968668204107689}
   - {fileID: 3598121221808087783}
