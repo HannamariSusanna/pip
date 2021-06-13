@@ -77,9 +77,17 @@ public class InfiniteChunks {
         }
     }
 
+    public Chunk GetChunkAt(Vector2Int coord) {
+        if (terrainChunkDictionary.ContainsKey(coord)) {
+            return terrainChunkDictionary[coord];
+        }
+        return null;
+    }
+
     public class Chunk {
         List<Vector3> points;
         List<GameObject> objects;
+        GameObject carrot;
         Vector2 chunkOffset;
         int coordPairingNumber;
         public bool isVisible;
@@ -116,12 +124,24 @@ public class InfiniteChunks {
             this.objects.Add(gameObject);
         }
 
+        public void AddCarrot(GameObject carrot) {
+            this.carrot = carrot;
+        }
+
+        public void PickUpCarrot() {
+            this.carrot.SetActive(false);
+        }
+
         public void Destroy() {
             isVisible = false;
 			for (int i = 0; i < objects.Count; i++) {
                 objects[i].SetActive(false);
             }
             objects.Clear();
+
+            if (carrot) {
+                carrot.SetActive(false);
+            }
 		}
     }
 

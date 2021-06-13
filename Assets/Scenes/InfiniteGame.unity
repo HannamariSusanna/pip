@@ -1664,6 +1664,8 @@ MonoBehaviour:
   - {fileID: 6447334924263584128, guid: 5e984924b11358d478dbba97efff037a, type: 3}
   - {fileID: 4037772597260803959, guid: f796b9406e456c747952b1de9bd4e3ae, type: 3}
   - {fileID: 9011523060558866218, guid: 00ba427d5078eb447b9d65efe174adfc, type: 3}
+  carrotPrefabs:
+  - {fileID: 7242632900074261531, guid: 2971fd7a56d0b404797407daa8cf44e3, type: 3}
   cometDeployer: {fileID: 907090073}
   distanceCalculator: {fileID: 762793304}
   levelText: {fileID: 1322818778}
@@ -2959,6 +2961,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 947117573}
+    - target: {fileID: 8706803466204283330, guid: 11548c27f1d5a1d459092a60868f1f4a, type: 3}
+      propertyPath: maxHealth
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11548c27f1d5a1d459092a60868f1f4a, type: 3}
 --- !u!1 &6549832805745050791

@@ -7,6 +7,7 @@ public class AsteroidGenerator : MonoBehaviour
     public GameObject[] bigAsteroidPrefabs;
     public GameObject[] mediumAsteroidPrefabs;
     public GameObject[] smallAsteroidPrefabs;
+    public GameObject[] carrotPrefabs;
     public DeployComet cometDeployer;
     public DistanceCalculator distanceCalculator;
     public TMPro.TextMeshProUGUI levelText;
@@ -26,7 +27,9 @@ public class AsteroidGenerator : MonoBehaviour
     public bool simulateAsteroids = false;
     
     private ObjectPool asteroidPool;
+    private ObjectPool carrotPool;
     private InfiniteChunks infiniteChunks;
+    private Dictionary<Vector2Int, bool> carrotsPicked;
     
     void Start()
     {
@@ -34,7 +37,9 @@ public class AsteroidGenerator : MonoBehaviour
             smallAsteroidPrefabs, mediumAsteroidPrefabs, bigAsteroidPrefabs
         };
         asteroidPool = new ObjectPool(prefabs, poolSizePerAsteroidType);
+        carrotPool = new ObjectPool(carrotPrefabs, 10);
         infiniteChunks = new InfiniteChunks(regionSize, seed);
+        carrotsPicked = new Dictionary<Vector2Int, bool>();
         GenerateLevel();
     }
 
@@ -66,33 +71,67 @@ public class AsteroidGenerator : MonoBehaviour
         foreach (Vector2Int chunkCoord in chunks.Keys) {
             InfiniteChunks.Chunk chunk = chunks[chunkCoord];
             if (!chunk.IsVisible()) {
-                DrawAsteroids(chunk);
+                DrawAsteroids(chunkCoord, chunk);
             }
         }
     }
 
-    private void DrawAsteroids(InfiniteChunks.Chunk chunk) {
+    private void DrawAsteroids(Vector2Int chunkCoord, InfiniteChunks.Chunk chunk) {
         List<Vector3> points = chunk.GetPoints();
+        System.Random prng = new System.Random(seed + chunk.GetCoordPairingNumber());
+        int carrotIndex = prng.Next(0, points.Count);
         for (int i = 0; i < points.Count; i++) {
             Vector3 point = points[i];
             int size = (int) point.z;
-            System.Random prng = new System.Random(seed + chunk.GetCoordPairingNumber());
             int variant = prng.Next(0, asteroidPool.GetVariantCountFor(size));
             GameObject asteroid = asteroidPool.GetFromPool(size, variant);
             if (asteroid != null) {
                 asteroid.transform.position = (new Vector2(point.x, point.y) - regionSize/2) + chunk.GetChunkOffset();
                 asteroid.SetActive(true);
+                if (carrotIndex == i && !carrotsPicked.ContainsKey(chunkCoord)) {
+                    DrawCarrot(chunkCoord, chunk, asteroid, size);
+                }
                 if (simulateAsteroids) {
                     var body = asteroid.GetComponent<Rigidbody2D>();
                     body.bodyType = RigidbodyType2D.Dynamic;
                     body.drag = 0f;
                     body.mass = 40f * size;
-                    body.AddForce(new Vector2(Random.value * body.mass/2, Random.value * body.mass/2), ForceMode2D.Impulse);
+                    body.AddForce(new Vector2(Random.value * body.mass/3, Random.value * body.mass/3), ForceMode2D.Impulse);
                 }
                 chunk.AddObject(asteroid);
             }
         }
         chunk.SetVisible(true);
+    }
+
+    private void DrawCarrot(Vector2Int chunkCoord, InfiniteChunks.Chunk chunk, GameObject asteroid, int asteroidSize) {
+        GameObject carrot = carrotPool.GetFromPool(0);
+        if (carrot == null) return;
+
+        Vector2 dir = Random.insideUnitCircle.normalized * (asteroidSize + 1);
+        carrot.transform.position = asteroid.transform.position + asteroid.transform.TransformDirection(dir);
+
+        Vector3 targetRotateDir = asteroid.transform.position - carrot.transform.position;
+        float angle = (Mathf.Atan2(targetRotateDir.y, targetRotateDir.x) * Mathf.Rad2Deg) - 90f;
+        carrot.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+        FixedJoint2D joint = carrot.GetComponent<FixedJoint2D>();
+        joint.connectedBody = asteroid.GetComponent<Rigidbody2D>();
+
+        Carrot script = carrot.GetComponent<Carrot>();
+        script.SetPickupCallback(CarrotPickup, chunkCoord);
+        carrot.SetActive(true);
+        chunk.AddCarrot(carrot);
+    }
+
+    public void CarrotPickup(Vector2Int chunkCoord) {
+        if (!carrotsPicked.ContainsKey(chunkCoord)) {
+            carrotsPicked.Add(chunkCoord, true);
+            InfiniteChunks.Chunk chunk = infiniteChunks.GetChunkAt(chunkCoord);
+            if (chunk != null) {
+                chunk.PickUpCarrot();
+            }
+        }
     }
 
     private void CheckForLevelUp() {
