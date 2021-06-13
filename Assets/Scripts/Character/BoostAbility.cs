@@ -26,4 +26,9 @@ public class BoostAbility : Ability {
             }
         }
     }
+
+    public override string GetName()
+    {
+        return "Boost";
+    }
 }

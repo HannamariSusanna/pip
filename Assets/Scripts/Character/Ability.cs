@@ -8,6 +8,7 @@ public abstract class Ability: MonoBehaviour {
     protected bool isActive = false;
 
     public abstract void Use();
+    public abstract string GetName();
 
     protected void Start() {
         currentEnergy = player.maxEnergy;

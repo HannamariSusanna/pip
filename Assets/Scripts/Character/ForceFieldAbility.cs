@@ -32,6 +32,11 @@ public class ForceFieldAbility : Ability {
         }
     }
 
+    public override string GetName()
+    {
+        return "Force Field";
+    }
+
     private void ConsumeEnergy(float amount) {
         currentEnergy -= amount;
         energyBar.SetEnergy(Mathf.RoundToInt(currentEnergy));

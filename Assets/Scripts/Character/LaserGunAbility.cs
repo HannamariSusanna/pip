@@ -19,4 +19,9 @@ public class LaserGunAbility : Ability {
             isActive = true;
         }
     }
+
+    public override string GetName()
+    {
+        return "Laser Gun";
+    }
 }
