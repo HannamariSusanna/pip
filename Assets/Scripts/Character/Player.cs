@@ -25,12 +25,12 @@ public abstract class Player : MonoBehaviour
   private bool invulnerable = false;
   private bool upDown = false;
   private bool downDown = false;
-  private float maxVelocity;
+  private float terminalVelocity;
 
   protected void Start() {
     currentHealth = maxHealth;
     healthBar.SetMaxHealth(maxHealth);
-    CalculateMaxVelocity();
+    CalculateTerminalVelocity();
     ability.SetPlayer(this);
   }
 
@@ -121,13 +121,13 @@ public abstract class Player : MonoBehaviour
   }
 
   public float GetMaxVelocity() {
-    return maxVelocity;
+    return terminalVelocity;
   }
 
-  public float CalculateMaxVelocity() {
+  public float CalculateTerminalVelocity() {
     Vector2 addedForce = (transform.right * moveSpeed);
-    maxVelocity = addedForce.magnitude / (body.drag * body.mass);
-    return maxVelocity;
+    terminalVelocity = addedForce.magnitude / (body.drag * body.mass);
+    return terminalVelocity;
   }
 
   public int GetCurrentHealth() {

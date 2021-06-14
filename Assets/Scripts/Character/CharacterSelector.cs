@@ -38,7 +38,7 @@ public class CharacterSelector : MonoBehaviour
         selectionImage.GetComponent<Image>().sprite = characters[m];
         Player player = characterPrefabs[m].GetComponent<Player>();
 
-        var speedCoroutine = ScaleTo(player.CalculateMaxVelocity() / maxSpeed, speed.rectTransform);
+        var speedCoroutine = ScaleTo(player.CalculateTerminalVelocity() / maxSpeed, speed.rectTransform);
         StartCoroutine(speedCoroutine);
         var enduranceCoroutine = ScaleTo(player.maxHealth / maxHealth, endurance.rectTransform);
         StartCoroutine(enduranceCoroutine);

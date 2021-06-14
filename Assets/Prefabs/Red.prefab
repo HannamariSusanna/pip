@@ -9984,9 +9984,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.52692336, y: 0.1536088}
+  m_Offset: {x: 0.44968718, y: 0.12602448}
   serializedVersion: 2
-  m_Radius: 0.56918806
+  m_Radius: 0.4974689
 --- !u!70 &6737883917431687599
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -10000,8 +10000,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.140845, y: -0.3265927}
-  m_Size: {x: 1.2270215, y: 0.7337385}
+  m_Offset: {x: -0.113260426, y: -0.29349163}
+  m_Size: {x: 1.0173825, y: 0.6675363}
   m_Direction: 1
 --- !u!114 &1711688029573750069
 MonoBehaviour:
