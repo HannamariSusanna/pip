@@ -2884,6 +2884,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bun
       objectReference: {fileID: 0}
+    - target: {fileID: 2091458817784036866, guid: 11548c27f1d5a1d459092a60868f1f4a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2091458817784036867, guid: 11548c27f1d5a1d459092a60868f1f4a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
