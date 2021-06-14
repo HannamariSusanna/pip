@@ -9963,7 +9963,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 10
-  m_LinearDrag: 0.5
+  m_LinearDrag: 0.7
   m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -10020,8 +10020,8 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   ability: {fileID: 1240916174279238108}
   agility: 5
-  moveSpeed: 8
-  energyRechargeRate: 5
+  moveSpeed: 11
+  energyRechargeRate: 6
   maxHealth: 4
   invulnerableTimeAfterHit: 2
   maxEnergy: 100
