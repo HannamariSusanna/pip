@@ -16,9 +16,16 @@ public class DistanceCalculator : MonoBehaviour, PointsCalculator
     // Update is called once per frame
     void Update()
     {
-        maxDistance = Mathf.Max(maxDistance, Vector3.Distance(start, player.position));
+        float playerDistance = Vector3.Distance(start, player.position);
+        maxDistance = Mathf.Max(maxDistance, playerDistance);
         int points = GetGameModePoints();
         tm.text = points.ToString();
+        if (playerDistance < maxDistance) {
+            Color color = Mathf.RoundToInt(Time.time) % 2 == 0 ? new Color(1, 0, 0, 1) : new Color(1, 1, 1, 1);
+            tm.color = color;
+        } else {
+            tm.color = new Color(1, 1, 1, 1);
+        }
     }
 
     public int GetGameModePoints() {

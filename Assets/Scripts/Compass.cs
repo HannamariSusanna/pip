@@ -9,6 +9,7 @@ public class Compass : MonoBehaviour
     public Transform target;
     public RectTransform compass;
     public Camera uiCamera;
+    public bool invertTarget;
     
     private CanvasRenderer canvasRenderer;
     private Vector3 originalPos;
@@ -45,9 +46,9 @@ public class Compass : MonoBehaviour
     private void RotateTowardsTarget() {
         Vector3 targetDir = target.position - player.position;
         float angle = (Mathf.Atan2(targetDir.y, targetDir.x) * Mathf.Rad2Deg);
-        Vector3 playerAngle = player.eulerAngles;
-        playerAngle.z *= -1;
-        playerAngle.z += angle;
-        transform.eulerAngles = playerAngle;
+        if (invertTarget) {
+            angle += 180;
+        }
+        transform.eulerAngles = new Vector3(0, 0, -player.eulerAngles.z + angle);
     }
 }
