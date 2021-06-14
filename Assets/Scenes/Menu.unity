@@ -527,7 +527,7 @@ GameObject:
   - component: {fileID: 554949080}
   - component: {fileID: 554949079}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Bunny
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -549,8 +549,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -235, y: 398.80002}
-  m_SizeDelta: {x: 147.6405, y: 195.22647}
+  m_AnchoredPosition: {x: -239, y: 398.80002}
+  m_SizeDelta: {x: 150, y: 225}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &554949077
 MonoBehaviour:
@@ -572,7 +572,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -798389541108039205, guid: 1cdaccae3cc0fa749a44a0ca0610fe1c, type: 3}
+  m_Sprite: {fileID: 4355961835189260895, guid: 9ba1e6124d70a01449c74a44652acbfa, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -666,7 +666,7 @@ GameObject:
   - component: {fileID: 612656493}
   - component: {fileID: 612656492}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Carrot Guards
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
