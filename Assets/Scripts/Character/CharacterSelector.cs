@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CharacterSelector : MonoBehaviour
 {
@@ -18,17 +19,30 @@ public class CharacterSelector : MonoBehaviour
     public Image endurance;
 
     private static float animationDuration = 0.5f;
+    private static float maxSpeed = 3f;
+    private static float maxHealth = 10f;
+    private static float maxDrag = 3f;
+
+    void Start() {
+        SelectCharacter((int) selection);
+    }
+
+    void Update() {
+         if (Input.GetKeyDown(KeyCode.Escape)) {
+             StartCoroutine(SceneUtils.load(SceneManager.GetActiveScene().buildIndex - 1));
+         }
+    }
 
     public void SelectCharacter(int m) {
         CharacterSelector.selection = (Character) m;
         selectionImage.GetComponent<Image>().sprite = characters[m];
         Player player = characterPrefabs[m].GetComponent<Player>();
 
-        var speedCoroutine = ScaleTo(player.moveSpeed / 100, speed.rectTransform);
+        var speedCoroutine = ScaleTo(player.CalculateMaxVelocity() / maxSpeed, speed.rectTransform);
         StartCoroutine(speedCoroutine);
-        var enduranceCoroutine = ScaleTo(player.maxHealth / 10f, endurance.rectTransform);
+        var enduranceCoroutine = ScaleTo(player.maxHealth / maxHealth, endurance.rectTransform);
         StartCoroutine(enduranceCoroutine);
-        var agilityCoroutine = ScaleTo(1 - player.body.angularDrag, agility.rectTransform);
+        var agilityCoroutine = ScaleTo(player.body.drag / maxDrag, agility.rectTransform);
         StartCoroutine(agilityCoroutine);
 
         abilityText.text = player.ability.GetName();

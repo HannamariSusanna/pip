@@ -3,15 +3,19 @@ using UnityEngine;
 public class BoostAbility : Ability {
 
     public float boostSpeed = 3f;
+    private static float boostToNormalThreshold = 0.2f;
 
     new void Update() {
         base.Update();
+        if (!isActive && player.body.velocity.magnitude - player.GetMaxVelocity() <= boostToNormalThreshold && player.animator.GetBool("BoostActive")) {
+            player.animator.SetBool("BoostActive", false);
+        }
+    }
+
+    void FixedUpdate() {
         if (isActive) {
             player.body.AddForce(transform.right * boostSpeed, ForceMode2D.Impulse);
             isActive = false;
-        }
-        if (player.body.velocity.sqrMagnitude <= player.GetSqrMaxVelocity() && player.animator.GetBool("BoostActive")) {
-            player.animator.SetBool("BoostActive", false);
         }
     }
 

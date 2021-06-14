@@ -25,12 +25,12 @@ public abstract class Player : MonoBehaviour
   private bool invulnerable = false;
   private bool upDown = false;
   private bool downDown = false;
-  private float sqrMaxVelocity;
+  private float maxVelocity;
 
   protected void Start() {
     currentHealth = maxHealth;
     healthBar.SetMaxHealth(maxHealth);
-    sqrMaxVelocity = (transform.right * moveSpeed).sqrMagnitude;
+    CalculateMaxVelocity();
     ability.SetPlayer(this);
   }
 
@@ -120,8 +120,14 @@ public abstract class Player : MonoBehaviour
     }
   }
 
-  public float GetSqrMaxVelocity() {
-    return sqrMaxVelocity * Time.deltaTime;
+  public float GetMaxVelocity() {
+    return maxVelocity;
+  }
+
+  public float CalculateMaxVelocity() {
+    Vector2 addedForce = (transform.right * moveSpeed);
+    maxVelocity = addedForce.magnitude / (body.drag * body.mass);
+    return maxVelocity;
   }
 
   public int GetCurrentHealth() {
