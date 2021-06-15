@@ -32,6 +32,7 @@ public abstract class Player : MonoBehaviour
     healthBar.SetMaxHealth(maxHealth);
     CalculateTerminalVelocity();
     ability.SetPlayer(this);
+    agility = Mathf.Lerp(2f, 20f, PlayerPrefs.GetFloat("Sensitivity"));
   }
 
   void Update() {
